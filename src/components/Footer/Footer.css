@@ -1,0 +1,58 @@
+.footer_block {
+    height: 600px;
+    background: linear-gradient(to bottom, white, rgba(183, 247, 255, 0.643));
+    border-radius: 100px;
+    margin-top: 100px;
+    display: flex; 
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative;
+    justify-content: space-between; /* Распределение пространства между блоками */
+    padding: 0 50px; /* Отступы слева и справа */
+}
+
+.map_block {
+    margin-left: auto; /* Это обеспечит отступ между блоками */
+}
+
+.map_block_header {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(85, 101, 115);
+}
+
+.location_icon {
+    width: 70px;
+    margin-bottom: -10px;
+}
+
+.contacts_block {
+    background-color: rgba(255, 255, 255, 0.505);
+    position: relative; /* Убираем absolute, чтобы блок был в потоке документа */
+    width: 550px; /* Ширина блока контактов */
+    height: 460px; /* Высота блока контактов */
+    padding: 20px; /* Отступы внутри блока */
+    border-radius: 50px; /* Закругление углов (по желанию) */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); /* Добавление тени для визуального отделения */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы внутри блока вертикально */
+}
+
+.contacts_block_header {
+    text-align: left; /* Центрируем текст */
+    font-size: 50px; /* Размер шрифта заголовка */
+    color: rgb(85, 101, 115);
+    padding-left: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.contact_icon{
+    width: 70px;
+}
+
+.contact_text{
+    padding-top: 10px;
+    padding-left: 10px;
+}

@@ -1,0 +1,54 @@
+.header-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    gap: 60px;
+    position: absolute;
+    z-index: 6;
+    height: 300px;
+    top: 85%; 
+    left: 7%; 
+}
+
+.blocks_txt_head {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 0;
+    height: 30px;
+    color: white;
+    line-height: 1.2;
+    font-size: 15px;
+}
+
+.emodzi {
+    font-size: 60px;
+    line-height: 1;
+}
+
+.blocks_txt_descr{
+    margin-top: 40px;
+    color: rgb(117, 117, 143);
+    font-size: 20px;
+}
+
+.header-block {
+    background-color: rgba(255, 255, 255, 0.525);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+    padding: 35px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3); 
+}
+
+.header-block:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+    background-color: rgba(217, 247, 249, 0.5);
+}
+
+.blocks_txt {
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
