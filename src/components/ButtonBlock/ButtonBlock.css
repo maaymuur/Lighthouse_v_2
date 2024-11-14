@@ -29,3 +29,13 @@
 .no-scroll {
     overflow: hidden;
   }
+
+
+  @media (max-width: 375px) {
+    .custom-button {
+        font-size: 18px;
+        width: 200px;
+        height: 60px;
+    }
+
+  }

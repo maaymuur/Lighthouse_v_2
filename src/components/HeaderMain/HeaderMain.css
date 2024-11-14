@@ -1,21 +1,18 @@
 .header_main {
-    background-image: url('src/assets/images/main_1.png');
+    background-image: url('../assets/images/main_1.png'); 
     background-size: cover;
     background-position: center;
     height: calc(100vh - 10vh);
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    position: relative; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
     border-radius: 0 0 100px 100px;
     background-color: white;
+    z-index: 1; 
 }
 
 
@@ -59,7 +56,7 @@
 }
 
 .header-button--secondary {
-    padding-top:5px ;
+    padding:5px 5px 4px 5px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +85,6 @@ p {
     padding: 0px;
 }
 
-/* Блокируем прокрутку, фиксируя фон */
 .no-scroll {
     overflow: hidden;
   }
@@ -98,3 +94,93 @@ p {
     font-weight: lighter;
     margin-top: 50px;
 }
+
+
+  @media (max-width: 768px) {
+    .header_main {
+        border-radius: 0 0 30px 30px;
+        width: 100%;
+    }
+    .header_main_logo {
+        font-size: 10vh;
+        height: 35%;
+    }
+
+    .header_main_logo_add {
+        font-size: 6vh;
+        margin-left: 5px;
+    }
+
+    .header-button--secondary {
+        width: 80%;
+        height: 30%;
+        font-size: 3vh;
+    }
+
+    .button_order {
+        margin-top: 8%;
+    }
+    
+  }
+
+  
+  @media (max-width: 430px) {
+
+    .header_main {
+        border-radius: 0 0 20px 20px;
+        height: calc(100vh - 40vh);
+    }
+    .header_main_logo {
+        font-size: 7vh;
+        height: 35%;
+    }
+
+    .header_main_logo_add {
+        font-size: 5vh;
+        margin-left: 5px;
+    }
+
+    .header-button--secondary {
+        width: 80%;
+        height: 30%;
+        font-size: 2vh;
+    }
+
+    .button_order {
+        margin-top: 8%;
+    }
+    
+  }
+
+
+  @media (max-width: 414px) {
+
+    .header_main {
+        border-radius: 0 0 20px 20px;
+        height: calc(100vh - 40vh);
+    }
+    .header_main_logo {
+        font-size: 7vh;
+        height: 35%;
+    }
+
+    .header_main_logo_add {
+        font-size: 5vh;
+        margin-left: 5px;
+    }
+
+    .header-button--secondary {
+        width: 80%;
+        height: 30%;
+        font-size: 2vh;
+    }
+
+    .button_order {
+        margin-top: 8%;
+    }
+    
+  }
+
+
+
+  

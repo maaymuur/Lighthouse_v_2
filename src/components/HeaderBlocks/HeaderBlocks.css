@@ -1,12 +1,12 @@
 .header-blocks {
     display: grid;
-    grid-template-columns: repeat(3, 370px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 60px;
-    position: absolute;
-    z-index: 6;
-    height: 300px;
-    top: 85%; 
-    left: 7%; 
+    position: relative; 
+    z-index: 6; 
+    width: calc(100% - 14%); 
+    margin: 0 auto;
+    margin-top: -70px; 
 }
 
 .blocks_txt_head {
@@ -25,14 +25,14 @@
     line-height: 1;
 }
 
-.blocks_txt_descr{
+.blocks_txt_descr {
     margin-top: 40px;
     color: rgb(117, 117, 143);
     font-size: 20px;
 }
 
 .header-block {
-    background-color: rgba(255, 255, 255, 0.525);
+    background-color: rgba(210, 210, 210, 0.525);
     border-radius: 50px;
     backdrop-filter: blur(5px);
     transition: transform 0.3s ease;
@@ -52,3 +52,94 @@
     justify-content: center;
     align-items: center;
 }
+
+
+  @media (max-width: 768px) {
+    .header-blocks {
+        display: block;
+        
+    }
+
+    .header-block {
+        background-color: rgba(81, 144, 151, 0.525);
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 4%;
+    }
+
+    .blocks_txt_head {
+        line-height: 1.2;
+        font-size: 3vh;
+    }
+
+    .blocks_txt_descr {
+        margin-top: 3%;
+        font-size: 3vh;
+        color: aliceblue;
+    }
+
+    .emodzi {
+        font-size: 7vh;
+    }
+    
+  }
+
+
+  @media (max-width: 430px) {
+    .header-blocks {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .blocks_txt_head {
+        line-height: 1.2;
+        font-size: 1.5vh;
+    }
+
+    .header-block {
+        background-color: rgba(81, 144, 151, 0.525);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .blocks_txt_descr {
+        margin-top: 5%;
+        font-size: 2vh;
+    }
+
+    .emodzi {
+        font-size: 4.5vh;
+    }
+    
+  }
+
+  @media (max-width: 414px) {
+    .header-blocks {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .blocks_txt_head {
+        line-height: 1.2;
+        font-size: 1.5vh;
+    }
+
+    .header-block {
+        background-color: rgba(81, 144, 151, 0.525);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .blocks_txt_descr {
+        margin-top: 5%;
+        font-size: 2vh;
+    }
+
+    .emodzi {
+        font-size: 4.5vh;
+    }
+    
+  }
+
+
+  

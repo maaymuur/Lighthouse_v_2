@@ -1,7 +1,4 @@
-/* 
-*{
-  margin: 0px;
-} */
+
 
 @font-face {
   font-family: 'Helvetica';
@@ -44,4 +41,8 @@
   button {
     background-color: #f9f9f9;
   }
+}
+
+*{
+  margin: 0;
 }

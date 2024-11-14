@@ -10,9 +10,6 @@
     padding: 0 50px; /* Отступы слева и справа */
 }
 
-.map_block {
-    margin-left: auto; /* Это обеспечит отступ между блоками */
-}
 
 .map_block_header {
     font-size: 50px;
@@ -28,19 +25,19 @@
 
 .contacts_block {
     background-color: rgba(255, 255, 255, 0.505);
-    position: relative; /* Убираем absolute, чтобы блок был в потоке документа */
-    width: 550px; /* Ширина блока контактов */
-    height: 460px; /* Высота блока контактов */
-    padding: 20px; /* Отступы внутри блока */
-    border-radius: 50px; /* Закругление углов (по желанию) */
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); /* Добавление тени для визуального отделения */
+    position: relative; 
+    width: 550px;
+    height: 460px; 
+    padding: 20px;
+    border-radius: 50px; 
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); 
     display: flex;
-    flex-direction: column; /* Располагаем элементы внутри блока вертикально */
+    flex-direction: column; 
 }
 
 .contacts_block_header {
-    text-align: left; /* Центрируем текст */
-    font-size: 50px; /* Размер шрифта заголовка */
+    text-align: left; 
+    font-size: 50px;
     color: rgb(85, 101, 115);
     padding-left: 20px;
     padding-bottom: 50px;
@@ -56,3 +53,101 @@
     padding-top: 10px;
     padding-left: 10px;
 }
+
+@media (max-width: 768px) {
+    .footer_block {
+        height: auto;
+        border-radius: 20px;
+        margin-top: 10%;
+        display: block; 
+        padding: 0 20px; 
+    }
+
+    .contacts_block {
+        width: 97%; 
+        height: 30%; 
+        padding: 0px 0px 20px 20px; 
+        border-radius: 20px; 
+    }
+
+    .contacts_block_header {
+        font-size: 6vh; 
+        padding: 10px;
+    }
+
+    .contact_icon{
+        width: 10%;
+    }
+
+    .contacts_block_text{
+        font-size: 3vh;
+        padding-top: 2%;
+        padding-left: 10px;
+    }
+
+    .map_block{
+        margin-top: 5%;
+        padding-bottom: 10%;
+    }
+
+    .map_block_header{
+    font-size: 6vh;
+    text-align: left;
+    }
+
+    .location_icon{
+        width: 10%;
+    }
+
+    .map-container{
+    border-radius: 20px;
+    height: 200px;
+    }
+    
+  }
+
+  @media (max-width: 430px) {
+    .contacts_block_header {
+        font-size: 2.5vh; 
+        padding: 10px;
+    }
+
+    .contacts_block_text{
+        font-size: 2vh;
+        padding-top: 2%;
+        padding-left: 10px;
+    }
+
+    .contact_icon{
+        width: 15%;
+    }
+
+    .map_block_header{
+        font-size: 2.5vh;
+        }
+
+  }
+
+  @media (max-width: 414px) {
+    .contacts_block_header {
+        font-size: 2.5vh; 
+        padding: 10px;
+    }
+
+    .contacts_block_text{
+        font-size: 2vh;
+        padding-top: 2%;
+        padding-left: 10px;
+    }
+
+    .contact_icon{
+        width: 15%;
+    }
+
+    .map_block_header{
+        font-size: 2.5vh;
+        }
+
+  }
+
+

@@ -3,11 +3,12 @@ import Button from '../Button/Button';
 import Modal from '../Modal/Modal'; // Импортируем компонент модального окна
 import './HeaderMain.css';
 
-const images = [
-  'src/assets/images/main_1.png',
-  'src/assets/images/main_3.png',
-  'src/assets/images/main_2.png',
-];
+import main1 from '../../assets/images/main_1.png';
+import main2 from '../../assets/images/main_2.png';
+import main3 from '../../assets/images/main_3.png';
+
+const images = [main1, main2, main3];
+
 
 const HeaderMain = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

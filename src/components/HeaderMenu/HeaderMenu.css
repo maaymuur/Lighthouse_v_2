@@ -1,7 +1,8 @@
 .header_menu {
   position: fixed;
   top: 0;
-  margin-left: 50px; 
+  left: 50%;
+  transform: translateX(-50%); 
   margin-top: 15px;
   background-color: rgba(135, 255, 248, 0.12);
   backdrop-filter: blur(15px);
@@ -11,14 +12,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
-  width: 93%;
-  transition: background-color 1s ease; /* Плавный переход фона */
+  width: calc(100% - 100px); 
+  transition: background-color 1s ease;
 }
 
 
 .header-button--primary:hover .gradient {
-  opacity: 1; /* Показываем градиент при наведении */
+  opacity: 1; 
 }
 
 a{
@@ -103,4 +103,57 @@ a{
 
 .header-button--primary:hover::after {
   opacity: 1;
+}
+
+
+@media (max-width: 480px) {
+  .header_menu {
+    height: 30px; 
+    width: calc(100% - 40px); 
+  }
+  
+  .menu {
+    column-gap: 0px;                     
+  }
+
+  .header-button--primary  {
+    font-size: 1.800vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font  {
+    font-size: 2.5vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font::after  {
+    width: calc(100% - 2px);
+  }
+
+}
+
+@media (max-width: 375px) {
+  .header_menu {
+    height: 30px; 
+    width: calc(100% - 40px); 
+  }
+  
+  .menu {
+    column-gap: 0px;                     
+  }
+
+  .header-button--primary  {
+    font-size: 1.800vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font  {
+    font-size: 2.5vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font::after  {
+    width: calc(100% - 2px);
+  }
+
 }
