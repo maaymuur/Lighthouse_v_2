@@ -96,7 +96,7 @@ img {
 
 }
 
-@media (min-width: 430px) {
+@media (max-width: 430px) {
 
     .adv_block_image {
         height: 55vh;
