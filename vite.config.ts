@@ -5,3 +5,4 @@ export default defineConfig({
   base: '/Lighthouse_v_2/',
   plugins: [react()],
 });
+
