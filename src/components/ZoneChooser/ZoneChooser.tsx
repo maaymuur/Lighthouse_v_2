@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useSwipeable } from 'react-swipeable'; // Импортируем хук
 import ZoneButtonsList from '../ZoneButtonsList/ZoneButtonsList';
 import './ZoneChooser.css';
 import main1 from '../../assets/images/main_1.png';
@@ -51,10 +50,6 @@ const ZoneChooser = () => {
         );
     };
 
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft: handleNextImage,    // Если свайп влево — показываем следующее изображение
-        onSwipedRight: handlePrevImage,   // Если свайп вправо — показываем предыдущее изображение
-    });
 
     useEffect(() => {
         handleZoneChange('ЗОНЫ ОТДЫХА');
@@ -72,7 +67,6 @@ const ZoneChooser = () => {
                     {zoneImages.length > 0 && (
                         <div
                             className="image-slider"
-                            {...swipeHandlers}  // Добавляем обработчик свайпов
                         >
                             <button onClick={handlePrevImage} className="arrow-button left-arrow">
                                 <img src={leftArrow} alt="Назад" className="arrow-image" />
