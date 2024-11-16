@@ -12,8 +12,8 @@ import kitchen_1 from '../../assets/images/street_kitchen_1.png'
 import kitchen_2 from '../../assets/images/street_kitchen_2.png'
 import kitchen_3 from '../../assets/images/street_kitchen_3.png'
 
-// Импортируем хук для свайпов
 import { useSwipeable } from 'react-swipeable';
+
 
 const ZoneChooser = () => {
     const [zoneText, setZoneText] = useState('');
