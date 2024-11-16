@@ -12,14 +12,12 @@ import kitchen_1 from '../../assets/images/street_kitchen_1.png'
 import kitchen_2 from '../../assets/images/street_kitchen_2.png'
 import kitchen_3 from '../../assets/images/street_kitchen_3.png'
 
-import { useSwipeable } from 'react-swipeable';
-
-
 const ZoneChooser = () => {
     const [zoneText, setZoneText] = useState('');
     const [zoneImages, setZoneImages] = useState<string[]>([]);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+    // Перечень изображений для разных зон
     const zoneImagesData: Record<string, string[]> = {
         'ЗОНЫ ОТДЫХА': [main1, main2],
         'УЛИЧНАЯ КУХНЯ': [kitchen_1, kitchen_2, kitchen_3],
@@ -53,11 +51,33 @@ const ZoneChooser = () => {
         );
     };
 
-    // Хук для обработки свайпов
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft: handleNextImage, // Свайп влево — следующее изображение
-        onSwipedRight: handlePrevImage, // Свайп вправо — предыдущее изображение
-    });
+    // Состояния для отслеживания свайпа
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    // Функция для начала свайпа
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStart(e.touches[0].clientX); // Сохраняем начальную точку
+    };
+
+    // Функция для окончания свайпа
+    const handleTouchEnd = () => {
+        if (touchStart && touchEnd !== null) {
+            // Если свайп влево
+            if (touchStart - touchEnd > 50) {
+                handleNextImage();
+            }
+            // Если свайп вправо
+            if (touchEnd - touchStart > 50) {
+                handlePrevImage();
+            }
+        }
+    };
+
+    // Функция для отслеживания движения пальца
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.touches[0].clientX); // Сохраняем конечную точку
+    };
 
     useEffect(() => {
         handleZoneChange('ЗОНЫ ОТДЫХА');
@@ -71,7 +91,12 @@ const ZoneChooser = () => {
             </div>
             <div className="main_zone_block">
                 <div className="text_zone_block">{zoneText}</div>
-                <div className="pictures_zone_block" {...swipeHandlers}>
+                <div
+                    className="pictures_zone_block"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     {zoneImages.length > 0 && (
                         <div className="image-slider">
                             <button onClick={handlePrevImage} className="arrow-button left-arrow">
