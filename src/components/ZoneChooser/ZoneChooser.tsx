@@ -12,6 +12,9 @@ import kitchen_1 from '../../assets/images/street_kitchen_1.png'
 import kitchen_2 from '../../assets/images/street_kitchen_2.png'
 import kitchen_3 from '../../assets/images/street_kitchen_3.png'
 
+// Импортируем хук для свайпов
+import { useSwipeable } from 'react-swipeable';
+
 const ZoneChooser = () => {
     const [zoneText, setZoneText] = useState('');
     const [zoneImages, setZoneImages] = useState<string[]>([]);
@@ -50,21 +53,11 @@ const ZoneChooser = () => {
         );
     };
 
-    // Для реализации жестов
-    const [touchStart, setTouchStart] = useState(0);
-
-    const handleTouchStart = (e: React.TouchEvent) => {
-        setTouchStart(e.touches[0].clientX);
-    };
-
-    const handleTouchEnd = (e: React.TouchEvent) => {
-        const touchEnd = e.changedTouches[0].clientX;
-        if (touchStart - touchEnd > 50) {
-            handleNextImage(); // Свайп вправо — следующее изображение
-        } else if (touchEnd - touchStart > 50) {
-            handlePrevImage(); // Свайп влево — предыдущее изображение
-        }
-    };
+    // Хук для обработки свайпов
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: handleNextImage, // Свайп влево — следующее изображение
+        onSwipedRight: handlePrevImage, // Свайп вправо — предыдущее изображение
+    });
 
     useEffect(() => {
         handleZoneChange('ЗОНЫ ОТДЫХА');
@@ -78,11 +71,7 @@ const ZoneChooser = () => {
             </div>
             <div className="main_zone_block">
                 <div className="text_zone_block">{zoneText}</div>
-                <div className="pictures_zone_block"
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                    style={{ touchAction: 'none' }} // Запрещаем стандартный скролл
-                >
+                <div className="pictures_zone_block" {...swipeHandlers}>
                     {zoneImages.length > 0 && (
                         <div className="image-slider">
                             <button onClick={handlePrevImage} className="arrow-button left-arrow">
