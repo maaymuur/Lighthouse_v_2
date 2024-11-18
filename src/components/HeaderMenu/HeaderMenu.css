@@ -178,27 +178,28 @@ a{
 
 
 @media (max-width: 430px) {
-
   .menu {
-    display: none; /* Прячем меню по умолчанию */
+    display: none; 
   }
+
   .menu-toggle {
-    display: flex; /* Показываем бургер */
+    display: flex; 
   }
+
   .menu--open {
-    display: flex; /* Открываем меню при клике */
+    display: flex; 
     justify-content: start;
     align-items: start;
   }
 
   .header_menu {
     backdrop-filter: blur(0px);
-    height: 0px; 
-    width: 0px;
+    height: 50px; /* Установите нужную высоту */
+    width: 100%; /* Ширина, которая будет занимать экран */
     justify-content: start;
     align-items: start;
   }
-  
+
   .menu {
     column-gap: 0px;                     
   }
@@ -216,6 +217,4 @@ a{
   .header-button--font::after  {
     width: calc(100% - 2px);
   }
-
 }
-
