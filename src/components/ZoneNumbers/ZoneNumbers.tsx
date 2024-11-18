@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './ZoneNumbers.css';
-import number_1 from '../../assets/images/number_1.png';
-import number_2 from '../../assets/images/number_2.png';
-import number_3 from '../../assets/images/number_3.png';
-import leftArrow from '../../assets/images/arrow_left.png';
-import rightArrow from '../../assets/images/arrow-right.png';
-import room from '../../assets/images/room.png';
-import cook from '../../assets/images/cook.png';
-import bath from '../../assets/images/ bath.png';
+import number_1 from '/assets/images/number_1.png';
+import number_2 from '/assets/images/number_2.png';
+import number_3 from '/assets/images/number_3.png';
+import leftArrow from '/assets/images/arrow_left.png';
+import rightArrow from '/assets/images/arrow-right.png';
+import room from '/assets/images/room.png';
+import cook from '/assets/images/cook.png';
+import bath from '/assets/images/ bath.png';
 
 const ZoneNumbers = () => {
     const images = [number_1, number_2, number_3];

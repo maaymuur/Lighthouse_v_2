@@ -20,7 +20,7 @@
   display: flex; /* Переключаем на видимый */
   flex-direction: column;
   gap: 10px;
-  background-color: rgba(135, 255, 248, 0.12);
+  background-color: rgb(40, 134, 148);
   position: absolute;
   top: 60px;
   left: 50%;
@@ -28,6 +28,7 @@
   padding: 20px;
   border-radius: 10px;
   z-index: 100;
+  backdrop-filter: blur(15px);
 }
 
 /* Кнопка бургер-меню */
@@ -37,9 +38,9 @@
   color: white;
   border: none;
   border-radius: 50%;
-  font-size: 24px;
-  width: 70px;
-  height: 70px;
+  font-size: 4vh;
+  width: 90px;
+  height: 90px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -138,21 +139,21 @@ a{
 
   .menu {
     display: none; 
+    height: 25vh;
   }
   .menu-toggle {
     display: flex; 
   }
   .menu--open {
     display: flex; 
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
   }
 
   .header_menu {
-    backdrop-filter: blur(0px);
     height: 0px; 
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
   }
   
   .menu {
@@ -160,12 +161,12 @@ a{
   }
 
   .header-button--primary  {
-    font-size: 1.800vw;
+    font-size: 4vw;
     padding: 8px 8px;
   }
 
   .header-button--font  {
-    font-size: 2.5vw;
+    font-size: 6vw;
     padding: 8px 8px;
   }
 
@@ -175,46 +176,12 @@ a{
 
 }
 
-
-
 @media (max-width: 430px) {
-  .menu {
-    display: none; 
-  }
-
-  .menu-toggle {
-    display: flex; 
-  }
-
-  .menu--open {
-    display: flex; 
-    justify-content: start;
-    align-items: start;
-  }
-
   .header_menu {
-    backdrop-filter: blur(0px);
-    height: 50px; /* Установите нужную высоту */
-    width: 100%; /* Ширина, которая будет занимать экран */
-    justify-content: start;
-    align-items: start;
-  }
-
-  .menu {
-    column-gap: 0px;                     
-  }
-
-  .header-button--primary  {
-    font-size: 1.800vw;
-    padding: 8px 8px;
-  }
-
-  .header-button--font  {
-    font-size: 2.5vw;
-    padding: 8px 8px;
-  }
-
-  .header-button--font::after  {
-    width: calc(100% - 2px);
+    height: 0px; 
+    left: 50%;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
   }
 }

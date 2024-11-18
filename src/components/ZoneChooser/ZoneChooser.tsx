@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import ZoneButtonsList from '../ZoneButtonsList/ZoneButtonsList';
 import './ZoneChooser.css';
-import main1 from '../../assets/images/main_1.png';
-import main2 from '../../assets/images/main_2.png';
-import leftArrow from '../../assets/images/arrow_left.png';
-import rightArrow from '../../assets/images/arrow-right.png';
-import active_1 from '../../assets/images/active_zones_1.png';
-import parking_1 from '../../assets/images/parking_1.png'
-import parking_2 from '../../assets/images/parking_2.png'
-import kitchen_1 from '../../assets/images/street_kitchen_1.png'
-import kitchen_2 from '../../assets/images/street_kitchen_2.png'
-import kitchen_3 from '../../assets/images/street_kitchen_3.png'
+import main1 from '/assets/images/main_1.png';
+import main2 from '/assets/images/main_2.png';
+import leftArrow from '/assets/images/arrow_left.png';
+import rightArrow from '/assets/images/arrow-right.png';
+import active_1 from '/assets/images/active_zones_1.png';
+import parking_1 from '/assets/images/parking_1.png'
+import parking_2 from '/assets/images/parking_2.png'
+import kitchen_1 from '/assets/images/street_kitchen_1.png'
+import kitchen_2 from '/assets/images/street_kitchen_2.png'
+import kitchen_3 from '/assets/images/street_kitchen_3.png'
 
 const ZoneChooser = () => {
     const [zoneText, setZoneText] = useState('');

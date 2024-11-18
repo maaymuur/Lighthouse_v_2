@@ -1,7 +1,7 @@
 import './AdvForest.css';
-import forest from '../../assets/images/forest.png'
-import clouds from '../../assets/images/clouds.png'
-import leafs from '../../assets/images/leafs.png'
+import forest from '/assets/images/forest.png'
+import clouds from '/assets/images/clouds.png'
+import leafs from '/assets/images/leafs.png'
 
 const AdvForest =()=>{
     return(

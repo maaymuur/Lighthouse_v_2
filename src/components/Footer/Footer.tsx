@@ -1,7 +1,7 @@
 import MapComponent from '../YandexMap/YandexMap';
 import './Footer.css';
-import location from '../../assets/images/location-pin.png';
-import contact from '../../assets/images/contacts-icon.png';
+import location from '/assets/images/location-pin.png';
+import contact from '/assets/images/contacts-icon.png';
 
 const Footer = () => {
     return (
