@@ -1,0 +1,220 @@
+/* Общие стили для больших экранов */
+.zone_numbers_block {
+    box-shadow: 0px 4px 70px rgba(32, 23, 69, 0.401);
+    background: radial-gradient(circle, #c26db745, white);
+    border-radius: 100px;
+    margin: 50px 2%;
+    padding-bottom: 15px;
+    height: auto;
+}
+
+.zone_numbers_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 50px;
+    gap: 20px;
+}
+
+.zone_numbers_header {
+    text-align: left;
+    font-size: 4vw;
+    color: rgb(85, 101, 115);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zones_arrow-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.2s ease, scale 0.2s ease;
+}
+
+.zones_arrow-button img {
+    transition: transform 0.2s ease;
+    width: 8vw;
+    max-width: 50px;
+}
+
+.zones_arrow-button:hover img {
+    transform: scale(1.2);
+}
+
+.zone_numbers_text {
+    font-size: 2.5vw;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 50px;
+    margin-top: 30px;
+}
+
+.zone_numbers_pictures {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.zones_arrow-button.left-arrow {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.zones_arrow-button.right-arrow {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-image {
+    width: 15vw;
+    max-width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.icon_text {
+    align-self: center;
+    font-size: 2.5vw;
+}
+
+@media (max-width: 768px) {
+    .zone_numbers_block {
+        border-radius: 20px;
+        padding-bottom: 0px;
+    }
+
+    .zone_numbers_main {
+        display: block;
+        padding: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 10px;
+    }
+
+    .zone_numbers_header {
+        font-size: 5vh;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .zone_numbers_text {
+        grid-template-columns: 10% 80%;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    .icon-image {
+        width: 6vw; 
+        padding-right: 0px;
+    }
+
+    .zones_arrow-button.left-arrow {
+        left: 0px;
+    }
+    
+    .zones_arrow-button.right-arrow {
+        right: 0px;
+    }
+
+    .zone_numbers_pictures {
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 480px) {
+    .zone_numbers_block {
+        border-radius: 20px;
+        padding-bottom: 0px;
+    }
+
+    .zone_numbers_main {
+        padding: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 10px;
+    }
+
+    .zone_numbers_header {
+        font-size: 5vh;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .zone_numbers_text {
+        grid-template-columns: 10% 80%;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    .icon-image {
+        width: 6vw; 
+        padding-right: 0px;
+    }
+
+    .zones_arrow-button.left-arrow {
+        left: 0px;
+    }
+    
+    .zones_arrow-button.right-arrow {
+        right: 0px;
+    }
+
+    .zone_numbers_pictures {
+        margin-top: 8%;
+    }
+}
+
+
+
+
+@media (max-width: 375px) {
+    .zone_numbers_block {
+        border-radius: 20px;
+        padding-bottom: 0px;
+    }
+
+    .zone_numbers_main {
+        padding: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 10px;
+    }
+
+    .zone_numbers_header {
+        font-size: 5vh;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .zone_numbers_text {
+        grid-template-columns: 10% 80%;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    .icon-image {
+        width: 6vw; 
+        padding-right: 0px;
+    }
+
+    .zones_arrow-button.left-arrow {
+        left: 0px;
+    }
+    
+    .zones_arrow-button.right-arrow {
+        right: 0px;
+    }
+
+    .zone_numbers_pictures {
+        margin-top: 8%;
+    }
+}
+
