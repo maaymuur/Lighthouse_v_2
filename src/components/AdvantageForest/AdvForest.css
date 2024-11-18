@@ -158,3 +158,35 @@ img {
 
 }
 
+
+
+@media (max-width: 375px) {
+
+    .adv_block_image {
+        height: 88vh;
+    }
+
+    .adv_block_header{
+        padding: 20px;
+    }
+
+    .adv_block_text {
+        font-size: 3vw;
+        width: 300px;
+        margin-top: -20px;
+        margin-right: 20%;
+    }
+
+    .clouds-image {
+        width: 40%;
+        left: 0;
+        bottom: 0;
+        top: -60%;
+        transform: translate(-20%);
+    }
+    .forest-image {
+        top: -5%;
+    }
+
+}
+

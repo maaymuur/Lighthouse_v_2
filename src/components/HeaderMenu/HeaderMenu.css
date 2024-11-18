@@ -134,8 +134,51 @@ a{
   opacity: 1;
 }
 
-
 @media (max-width: 480px) {
+
+  .menu {
+    display: none; 
+  }
+  .menu-toggle {
+    display: flex; 
+  }
+  .menu--open {
+    display: flex; 
+    justify-content: start;
+    align-items: start;
+  }
+
+  .header_menu {
+    backdrop-filter: blur(0px);
+    height: 0px; 
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .menu {
+    column-gap: 0px;                     
+  }
+
+  .header-button--primary  {
+    font-size: 1.800vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font  {
+    font-size: 2.5vw;
+    padding: 8px 8px;
+  }
+
+  .header-button--font::after  {
+    width: calc(100% - 2px);
+  }
+
+}
+
+
+
+@media (max-width: 430px) {
+
   .menu {
     display: none; /* Прячем меню по умолчанию */
   }
@@ -150,9 +193,8 @@ a{
 
   .header_menu {
     backdrop-filter: blur(0px);
-    height: 60px; 
-    width: 60px;
-    width: calc(100% - 40px); 
+    height: 0px; 
+    width: 0px;
     justify-content: start;
     align-items: start;
   }
@@ -177,28 +219,3 @@ a{
 
 }
 
-@media (max-width: 375px) {
-  .header_menu {
-    height: 30px; 
-    width: calc(100% - 40px); 
-  }
-  
-  .menu {
-    column-gap: 0px;                     
-  }
-
-  .header-button--primary  {
-    font-size: 1.800vw;
-    padding: 8px 8px;
-  }
-
-  .header-button--font  {
-    font-size: 2.5vw;
-    padding: 8px 8px;
-  }
-
-  .header-button--font::after  {
-    width: calc(100% - 2px);
-  }
-
-}
